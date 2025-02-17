@@ -1,0 +1,175 @@
+body { 
+    font-family: "Plus Jakarta Sans", serif;
+}
+.crud { 
+    padding: 5% 10%;
+    gap: 1em;
+}
+.crud-header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2em;
+}
+.crud-header h1{ 
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 50px;
+}
+.crud-header p { 
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.crud-header .header-profile img{ 
+    border-radius: 10em;
+    width:80px;
+}
+button { 
+    cursor: pointer;
+    border: none;
+}
+.add-btn {
+    
+    background: none;
+    margin-bottom: 2em;
+    color: #ffff;
+    background-color: #1763DC;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.add-btn:active { 
+    background-color: #0f449a;
+}
+
+.container { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    overflow-x: auto; /* Biar bisa scroll horizontal */
+
+}
+table {
+    width: 100%; /* Make sure table takes full width */
+    min-width: 600px; /* Bisa disesuaikan biar nggak terlalu kecil */
+    border-collapse: collapse;
+}
+.edit-btn, .delete-btn { 
+    color: white;
+    border-radius: 3px;
+    padding: 8px 15px;
+    font-size: 15px;
+}
+.edit-btn {
+    background-color: #ffbf00;
+
+}
+.delete-btn {
+    background-color: #f44336;
+}
+th { 
+    padding: 10px 0;
+    background-color: #F9FBFC;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    opacity: 0.6;
+    border-bottom: 1px solid #d6d6d6;
+}
+table tr td { 
+    padding: 17px 0;
+    border-bottom: 1px solid #d6d6d6;
+}
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Media queries  */
+/* Media Queries for Responsiveness */
+
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 600px) {
+    .crud { 
+        padding: 5%;
+    }
+
+    .crud-header { 
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .crud-header h1 {
+        font-size: 35px;
+    }
+
+    .crud-header p {
+        font-size: 16px;
+    }
+
+    .add-btn {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .container {
+        padding: 1em;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* For medium screens (tablets) */
+@media only screen and (max-width: 768px) {
+    .crud-header {
+        flex-direction: column-reverse;
+
+        gap: 1em;
+    }
+
+    .crud-header h1 {
+        font-size: 40px;
+    }
+
+    .crud-header p {
+        font-size: 17px;
+    }
+
+    .add-btn {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+}

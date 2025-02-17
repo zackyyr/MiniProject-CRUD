@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project - CRUD With PHP</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <section class="crud">
+        <div class="crud-header">
+            <div class="header-text">
+                <h1>Welcome, user</h1>
+                <p>This is a mini project for CRUD practicing purposes</p>
+            </div>
+            <div class="header-profile">
+                <a href=""><img src="img/pp.png" alt=""></a>
+            </div>
+        </div>
+
+        <button class="add-btn">+ Add New Item</button>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Customer Name</th>
+                        <th>Departure</th>
+                        <th>Weight</th>
+                        <th>Arrival</th>
+                        <th>Tracking ID</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ronald Richards</td>
+                        <td>Toronto</td>
+                        <td>821kg</td>
+                        <td>Oshawa</td>
+                        <td>F9203</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Darlene Robertson</td>
+                        <td>Calgary</td>
+                        <td>1200kg</td>
+                        <td>Edmonton</td>
+                        <td>F9204</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
 </body>
 </html>
