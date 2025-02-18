@@ -18,7 +18,7 @@
     <section class="crud">
         <div class="crud-header">
             <div class="header-text">
-                <h1>Welcome, user</h1>
+                <h1>Welcome, users</h1>
                 <p>This is a mini project for CRUD practicing purposes</p>
             </div>
             <div class="header-profile">
@@ -89,38 +89,12 @@
                     <label for="tracking_id">Tracking ID:</label>
                     <input type="text" id="tracking_id" name="tracking_id" placeholder="Tracking ID"><br><br>
                     <button class="btn save-btn" type="submit">Save</button>
-                    <button class="btn close-btn" onclick="closeModal()">Cancel</button>
+                    <button class="btn close-btn"  type="" onclick="closeModal()">Cancel</button>
                 </form>
             </div>
         </div>
     
     </section>
-    <script>
-        function openSettings(event) {
-            let settingsMenu = document.getElementById("settings");
-
-            // Toggle visibilitas
-            if (settingsMenu.style.display === "flex") {
-                settingsMenu.style.display = "none";
-            } else {
-                settingsMenu.style.display = "flex";
-            }
-
-            // Biar klik di luar menu nutup settings
-            document.addEventListener("click", function closeMenu(e) {
-                if (!settingsMenu.contains(e.target) && !event.target.closest("button")) {
-                    settingsMenu.style.display = "none";
-                    document.removeEventListener("click", closeMenu);
-                }
-            });
-        }
-
-        function openModal() {
-            document.getElementById("modal").style.display = "flex";
-        }
-        function closeModal() {
-            document.getElementById("modal").style.display = "none";
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
