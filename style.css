@@ -76,12 +76,15 @@ button {
     background: none;
     margin-bottom: 2em;
     color: #ffff;
-    background-color: #1763DC;
+    background-color: #000000;
+    border: 1px solid #000000;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: 0.1s ease-in;
 }
-.add-btn:active { 
-    background-color: #0f449a;
+.add-btn:hover { 
+    background-color: #fff;
+    color: #000;
 }
 
 .container { 
