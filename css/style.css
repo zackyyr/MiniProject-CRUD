@@ -27,12 +27,52 @@ body {
     border-radius: 10em;
     width:80px;
 }
+.profile-settings { 
+    display: none;
+    position: absolute;
+    border: 1px solid #cfcfcf;
+    background-color: #ffff;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 99999;
+    right: 13%;
+    top: 18%;
+}
+.profile-settings ul{ 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.profile-settings ul li a{ 
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    padding: 7px 10px;
+    width: 80%;
+    border-radius: 5px;
+}
+.profile-settings ul li:first-child {
+    border-bottom: 1px solid #ccc; /* Warna garis bawah */
+    padding-bottom: 10px; /* Biar ada jarak dikit */
+}
+.profile-settings ul li:last-child { 
+    padding-top: 10px;
+}
+.profile-settings ul li a:hover { 
+background-color: #ededed;
+}
 button { 
     cursor: pointer;
     border: none;
 }
+.header-profile button { 
+    background-color: transparent;
+}
 .add-btn {
-    
+    font-size: 18px;
     background: none;
     margin-bottom: 2em;
     color: #ffff;
@@ -136,13 +176,16 @@ table tr:last-child td {
         padding: 6px 12px;
         font-size: 13px;
     }
+    .profile-settings { 
+        right: auto;
+        left: 13%;
+    }
 }
 
 /* For medium screens (tablets) */
 @media only screen and (max-width: 768px) {
     .crud-header {
-        flex-direction: column-reverse;
-
+        /* flex-direction: column-reverse; */
         gap: 1em;
     }
 
@@ -172,4 +215,56 @@ table tr:last-child td {
         padding: 7px 14px;
         font-size: 14px;
     }
+    .profile-settings {     
+        top: 14%;
+    }
+
 }
+
+/* Modal Button Start */
+.form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+}
+form label{ 
+    display: block;
+    margin-bottom: 10px;
+}
+form input { 
+    width: 100%;
+    padding: 8px 0px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+}
+input:focus {
+    border-bottom: 1px solid #007BFF; /* Warna garis bawah saat aktif */
+    outline: none;
+}
+
+.save-btn {
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.close-btn { 
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+/* Modal Button End */
